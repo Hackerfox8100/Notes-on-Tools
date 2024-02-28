@@ -1,3 +1,4 @@
+# Sliver
 ## Generating Binaries
 * Generate an Implant (mtls, http, dns), this will generate a file saved at the location specified generate Generate a sliver binary
 ```
